@@ -12,6 +12,10 @@ print("-----------------------------------------------\nMode\n------------------
 print(sample_data.mode())
 print("-----------------------------------------------\nMeasures of spread (Dispersion)\n-----------------------------------------------")
 print(str(max(sample_data.DEP_DELAY) - min(sample_data.DEP_DELAY)) + " (HHMM)")
+print("-----------------------------------------------\nSimple Variance\n-----------------------------------------------")
+print("DEP_DELAY : " + str(sample_data.DEP_DELAY.var()))
+print("ARR_DELAY : " + str(sample_data.ARR_DELAY.var()))
+
 
 plt.vlines(sample_data.DEP_DELAY.mean(),
            ymin=-90, 
@@ -70,3 +74,5 @@ plt.ylabel("Arrival Delay (HHMM)")
 
 plt.legend(loc='lower right')
 plt.show()
+
+
