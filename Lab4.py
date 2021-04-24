@@ -9,7 +9,8 @@ import Converter
 data = pd.read_csv("August_2018_Nationwide_Airplane_Delay_Statistic.csv")
 
 x = data["ARR_DELAY"]
-mean = Converter.convertToMin(str(x.mean()))
+mean = x.mean()
+print(mean)
 size = len(x)
 
 

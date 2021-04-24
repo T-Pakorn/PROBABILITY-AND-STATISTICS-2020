@@ -51,5 +51,7 @@ data.plot(kind="scatter",
 plt.plot(data["DEP_DELAY"],      # Explanitory variable
          train_prediction,  # Predicted values
          color="blue");
-
+plt.title("Linear Regression")
+plt.xlabel("Departure Delay Time (Minutes)")
+plt.ylabel("Arrival Delay Time (Minutes)")
 plt.show()
