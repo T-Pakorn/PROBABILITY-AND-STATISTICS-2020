@@ -8,7 +8,7 @@ import Converter
 
 data = pd.read_csv("August_2018_Nationwide_Airplane_Delay_Statistic.csv")
 
-x = data["ARR_DELAY (HHMM)"]
+x = data["ARR_DELAY"]
 mean = Converter.convertToMin(str(x.mean()))
 size = len(x)
 
@@ -65,7 +65,7 @@ plt.hlines(xmin=89, xmax=100,
 
 plt.title("Confidence Interval (CI) of Mean")
 plt.xlabel("Confidence level in percentage (%)")
-plt.ylabel("Arrival Delay in minute (min)")
+plt.ylabel("Arrival Delay in minute (Minutes)")
 plt.show()
 
 

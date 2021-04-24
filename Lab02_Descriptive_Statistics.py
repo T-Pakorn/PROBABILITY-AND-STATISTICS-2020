@@ -11,11 +11,10 @@ print(sample_data.describe())
 print("-----------------------------------------------\nMode\n-----------------------------------------------")
 print(sample_data.mode())
 print("-----------------------------------------------\nMeasures of spread (Dispersion)\n-----------------------------------------------")
-print(str(max(sample_data.DEP_DELAY) - min(sample_data.DEP_DELAY)) + " (HHMM)")
+print(str(max(sample_data.DEP_DELAY) - min(sample_data.DEP_DELAY)) + " (Minutes)")
 print("-----------------------------------------------\nSimple Variance\n-----------------------------------------------")
 print("DEP_DELAY : " + str(sample_data.DEP_DELAY.var()))
 print("ARR_DELAY : " + str(sample_data.ARR_DELAY.var()))
-
 
 plt.vlines(sample_data.DEP_DELAY.mean(),
            ymin=-90, 
@@ -66,11 +65,10 @@ plt.hlines(sample_data.ARR_DELAY.std(),
            color="red",
            label='Standard Deviation of ARR_DELAY = {:+.2f}'.format(sample_data.ARR_DELAY.std()));
 
-
 plt.plot(sample_data.DEP_DELAY,sample_data.ARR_DELAY,'g.')
 plt.title("August 2018 Nationwide Airplane Delay Statistic")
-plt.xlabel("Departure Delay (HHMM)")
-plt.ylabel("Arrival Delay (HHMM)")
+plt.xlabel("Departure Delay (Minutes)")
+plt.ylabel("Arrival Delay (Minutes)")
 
 plt.legend(loc='lower right')
 plt.show()

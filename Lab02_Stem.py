@@ -9,7 +9,7 @@ y = sample_data.ARR_DELAY
 
 import stemgraphic
 
-#fig, ax = stemgraphic.stem_graphic(x)
-fig, ax = stemgraphic.stem_graphic(y)
+fig, ax = stemgraphic.stem_graphic(x)
+#fig, ax = stemgraphic.stem_graphic(y)
 
 plt.show()
